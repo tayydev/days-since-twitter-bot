@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id "org.jetbrains.kotlin.jvm" version "1.6.10"
+}
+
+group 'tech.nathann'
+version '0.1'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://takke.github.io/maven'
+        content {
+            includeGroup "jp.takke.twitter4j-v2"
+        }
+    }
+}
+
+dependencies {
+    implementation 'org.twitter4j:twitter4j-core:4.0.7'
+    //we need this library because we can't tweet on a basic dev account w/out using v2 apis
+    implementation 'jp.takke.twitter4j-v2:twitter4j-v2-support:1.0.4'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
