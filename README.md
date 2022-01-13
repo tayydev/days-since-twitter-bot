@@ -17,5 +17,5 @@ Compile with Gradle and create a keys.txt matching the following format:
 #date
 [yyyy-mm-dd]
 #message
-[TWEET MESSAGE HERE. eg. "It has be %DAYS% since last summer"]
+[TWEET MESSAGE HERE. eg. "It has be %DAYS% days since last summer"]
 ```
